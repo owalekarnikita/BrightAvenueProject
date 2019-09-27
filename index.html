@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title></title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" type="text/css" href="navigation.css">
+      <link rel="stylesheet" type="text/css" href="footer.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   </head>
+   <body style="margin: 0px;">
+      <!-- Navigation Bar-->
+      <div class="navbar">
+         <!--<a href="admin.html" style="float: left;">ADMIN</a>-->
+         <a href="aboutus.html"> ABOUT US </a>
+         <a href="career.html"> CAREERS </a>
+         <!--<a  href="onlineLect.html"> ONLINE VIDEOS </a>
+            <a  href="login.html"> LOGIN </a>
+            <a href="paymentgateway.html"> PAYMENT </a> -->
+         <a href="training1.html"> TRAINING </a>
+         <div class="dropdown">
+            <div class="dropbtn">SERVICES
+               <i class="fa fa-caret-down"></i>
+            </div>
+            <div class="dropdown-content">
+               <a href="SwDevelopment.html">Software Development&nbsp;</a><br>
+               <a href="digitalMarketing.html">Digital Marketing &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a><br>
+               <a href="AMC.html"> Clients &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</a>
+            </div>
+         </div>
+         <a class="active" href="index.html"><i class="fa fa-home" aria-hidden="true"></i>HOME </a>
+      </div>
+      <hr class="margin">
+      <div class="content" >
+         <center>
+            <img class="mySlides" src="Images/p5.jpg" width="70%" height="500px">
+            <img class="mySlides" src="Images/h6.jpeg" width="100%" height="500px">
+            <img class="mySlides" src="Images/h4.jpeg" width="100%" height="500px">
+            <!--<img class="mySlides" src="Images/bck1.jpg" width="99%" height="500px" class="imgbck">-->
+            <img class="mySlides" src="Images/p57.png" width="100%" height="500px">
+            <img src="Images/fp1.png" width="100%" height="500px" class="opacity mySlides">
+         </center>
+      </div>
+            <hr class="margin">
+            <center><a href="https://www.facebook.com" class="fa fa1 fa-facebook" aria-hidden="true" style="font-size: 24px;"></a>
+               <a href="https://twitter.com" class="fa fa1 fa-twitter" aria-hidden="true" style="font-size: 24px;"></a>
+               <a href="https://www.instagram.com" class="fa fa1 fa-instagram" aria-hidden="true" style="font-size: 24px;"></a>
+               <a href="https://www.linkedin.com" class="fa fa1 fa-linkedin" aria-hidden="true" style="font-size: 24px;"></a>
+               <a href="#" class="fa fa1 fa-google" aria-hidden="true" style="font-size: 24px;"></a>
+             </center>
+             
+      <script>
+         var myIndex = 0;
+         carousel();
+         
+         function carousel() {
+           var i;
+           var x = document.getElementsByClassName("mySlides");
+           for (i = 0; i < x.length; i++) {
+             x[i].style.display = "none";  
+           }
+           myIndex++;
+           if (myIndex > x.length) {myIndex = 1}    
+           x[myIndex-1].style.display = "block";  
+           setTimeout(carousel, 2000); // Change image every 2 seconds
+         }
+      </script>
+      </div>
+      <!-- Footer -->
+   </body>
+</html>

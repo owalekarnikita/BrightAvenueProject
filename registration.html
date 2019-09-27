@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="navigation.css">
+	<link rel="stylesheet" type="text/css" href="footer.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body style="margin: 0px;">
+	<!-- Navigation Bar-->
+	<div class="navbar">
+		<a href="aboutus.html"> ABOUT US </a>
+  	 	<a href="career.html"> CAREERS </a>
+        <!--<a  href="onlineLect.html"> ONLINE VIDEOS </a>-->
+        <!--  <a  href="login.html"> LOGIN </a>
+        <a href="paymentgateway.html"> PAYMENT </a> -->
+        <a href="training1.html"> TRAINING </a>
+         <div class="dropdown">
+    	<div class="dropbtn">SERVICES
+      		<i class="fa fa-caret-down"></i>
+    	</div>
+      <div class="dropdown-content">
+        <a href="SwDevelopment.html">Software Development&nbsp;</a><br>
+        <a href="digitalMarketing.html">Digital Marketing &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a><br>
+        <a href="AMC.html"> Clients &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</a>
+      </div>
+  		</div> 
+    	<a class="active" href="index.html"><i class="fa fa-home" aria-hidden="true"></i>HOME </a>
+
+  </div>
+	<hr>
+  <!-- Main Content -->
+    <div>
+        <table align="center">
+    <center>
+      <h1>
+        <i> REGISTRATION </i>
+      </h1>
+    </center>
+    <hr>
+    <form id="f1">
+      <tr>
+        <td><b> Full Name :</b></td>
+        <td><input type="text" name="fullname" id="text1"
+          placeholder="Full Name" /></td>
+        <td><label id="lbtext1" style="color: red; visibility: hidden"></label></td>
+      </tr>
+      <td>&nbsp;</td>
+      <tr>
+        <td><b> Address :</b></td>
+        <td><input type="text" name="address" id="text2"
+          placeholder="Address"></td>
+        <td><label id="lbtext2" style="color: red; visibility: hidden"></label></td>
+      </tr>
+      <td>&nbsp;</td>
+      <tr>
+        <td><b> Email :</b></td>
+        <td><input type="text" name="email" id="text3"
+          placeholder="Email"></td>
+        <td><label id="lbtext3" style="color: red; visibility: hidden"></label></td>
+      </tr>
+      <td>&nbsp;</td>
+      <tr>
+        <td><b> Contact No :</b></td>
+        <td><input type="text" name="contactno" id="text4"
+          placeholder="Contact No"></td>
+        <td><label id="lbtext4" style="color: red; visibility: hidden"></label></td>
+      </tr>
+      <td>&nbsp;</td>
+      <tr>
+        <td><b> Course : </b></td>
+        <td><input type="text" name="course" id="text5"
+          placeholder="Course"></td>
+        <td><label id="lbtext5" style="color: red; visibility: hidden"></label></td>
+      </tr>
+      <td>&nbsp;</td>
+      <tr>
+        <td><b> Qualification :</b></td>
+        <td><input type="text" name="qualification" id="text6"
+          placeholder="Qualification"></td>
+        <td><label id="lbtext6" style="color: red; visibility: hidden"></label></td>
+      </tr>
+      <td>&nbsp;</td>
+      <tr>        
+        <td><input type="submit" value="      Submit    " class="btn" onclick="validation()" ></td>
+        <td><input type="submit" value="      Reset   " class="btn"></td>
+      </tr>
+      <td>&nbsp;</td>
+    </form>
+  </table>
+    </div>
+  <hr>
+ <!-- Footer -->
+  <div>
+    <footer>
+        <ul style="text-align: center; margin: 0px;">
+          <a href="https://www.facebook.com" class="fa fa1 fa-facebook" style="font-size: 24px;"></a>
+          <a href="https://twitter.com" class="fa fa1 fa-twitter" style="font-size: 24px;"></a>
+          <a href="https://www.instagram.com" class="fa fa1 fa-instagram" style="font-size: 24px;"></a>
+          <a href="https://www.linkedin.com" class="fa fa1 fa-linkedin" style="font-size: 24px;"></a>
+          <a href="#" class="fa fa1 fa-google" style="font-size: 24px;"></a>
+        </ul>
+  </footer> 
+  </div>
+
+  <script type="text/javascript">
+
+function validation() {
+
+var fullname = f1.fullname.value;
+
+var address = f1.address.value;
+
+ var email = document.getElementById("text3").value;
+var regx = /^([a-z-0-9\.-]+)@([a-z-0-9-]+).([a-z]{2,8})(.[a-z]{2,8})?$/;  
+
+var contactno = document.getElementById("text4").value;
+var regx1 =/^[7-9][0-9]{9}$/; 
+
+var qualification = f1.qualification.value;
+var course = f1.course.value;
+
+if(fullname == null || fullname == ""){
+alert("Enter Valid Full Name");
+document.getElementById("lbtext1").innerHTML ="Invalid";
+document.getElementById("lbtext1").style.visibility ="visible";
+document.getElementById("lbtext1").style.color = "red";
+}else{
+  document.getElementById("lbtext1").innerHTML ="valid";
+document.getElementById("lbtext1").style.visibility ="visible";
+document.getElementById("lbtext1").style.color = "green";
+}
+
+if(address == null || address == ""){
+  alert("Enter Valid Address");
+  document.getElementById("lbtext2").innerHTML ="Invalid";
+  document.getElementById("lbtext2").style.visibility ="visible";
+  document.getElementById("lbtext2").style.color = "red";
+  }else{
+    document.getElementById("lbtext2").innerHTML ="valid";
+  document.getElementById("lbtext2").style.visibility ="visible";
+  document.getElementById("lbtext2").style.color = "green";
+  }
+  
+if(regx.test(email)){
+  
+  document.getElementById("lbtext3").innerHTML ="valid";
+  document.getElementById("lbtext3").style.visibility ="visible";
+  document.getElementById("lbtext3").style.color = "green";
+  }else{
+    alert("Enter Valid Email");
+    document.getElementById("lbtext3").innerHTML ="Invalid";
+  document.getElementById("lbtext3").style.visibility ="visible";
+  document.getElementById("lbtext3").style.color = "red";
+  } 
+  
+if(regx1.test(contactno)){
+  
+  document.getElementById("lbtext4").innerHTML ="valid";
+  document.getElementById("lbtext4").style.visibility ="visible";
+  document.getElementById("lbtext4").style.color = "green";
+  }else{
+    alert("Enter Valid Contact No");
+    document.getElementById("lbtext4").innerHTML ="Invalid";
+  document.getElementById("lbtext4").style.visibility ="visible";
+  document.getElementById("lbtext4").style.color = "red";
+  }
+  
+if(course == null || course == ""){
+  alert("Enter Valid Course");
+  document.getElementById("lbtext5").innerHTML ="Invalid";
+  document.getElementById("lbtext5").style.visibility ="visible";
+  document.getElementById("lbtext5").style.color = "red";
+  }else{
+    document.getElementById("lbtext5").innerHTML ="valid";
+  document.getElementById("lbtext5").style.visibility ="visible";
+  document.getElementById("lbtext5").style.color = "green";
+  }
+  
+if(qualification == null || qualification == ""){
+  alert("Enter Valid qualification");
+  document.getElementById("lbtext6").innerHTML ="Invalid";
+  document.getElementById("lbtext6").style.visibility ="visible";
+  document.getElementById("lbtext6").style.color = "red";
+  }else{
+    document.getElementById("lbtext6").innerHTML ="valid";
+  document.getElementById("lbtext6").style.visibility ="visible";
+  document.getElementById("lbtext6").style.color = "green";
+  }
+
+}
+
+</script>
+
+</body>
+</html>
